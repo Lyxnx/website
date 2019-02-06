@@ -1,6 +1,6 @@
-body {
-	background-image: url(background.png);
-	height: 100%;
+html {
+	background-image: url(subbackground.jpg);
+	background-attachment: fixed;
 }
 
 article {
@@ -10,10 +10,9 @@ article {
 	background-color: #eff0f1;
 	padding: 20px;
 	line-height: 1.5em;
-	box-shadow: 12px 0 15px -4px rgba(175, 93, 59, 0.8), -12px 0 8px -4px rgba(175, 93, 59, 0.8);
 }
 
-article > ul {
+article > ul, article > ol {
 	padding-left: 20px;
 }
 
@@ -21,78 +20,3 @@ article, h1, h3 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
-
-.spacer {
-	width: 100%;
-	height: 40px;
-}
-
-#active {
-	border-bottom: 2px #f46124 solid;
-}
-
-#navbar {
-	position: fixed;
-	width: 100%;
-	top: 0;
-	left: 0;
-	list-style-type: none;
-	overflow: hidden;
-	background-color: #222;
-	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#footer {
-	list-style-type: none;
-	overflow: hidden;
-}
-
-#navbar > li, #footer > li {
-	float: left;
-}
-
-#navbar > li a, #footer > li a, #footer > li p {
-	display: block;
-	color: #83d0f2;
-	text-align: center;
-	font-weight: bold;
-	padding: 14px 16px;
-	text-decoration: none;
-}
-
-#navbar > li a:hover, #footer > li a:hover {
-	background-color: #111;
-}
-
-* {
-	font-family: "Segoe UI",Arial,sans-serif;
-	margin: 0;
-	padding: 0;
-}
-
-/* STUFF TO MAKE FOOTER STAY AT BOTTOM */
-
-#container {
-	min-height: 100%;
-}
-
-#main {
-	overflow: auto;
-	padding-bottom: 40px;
-}
-
-#footer-container {
-	background-color: #222;
-	position: relative;
-	margin-top: -35px;
-	clear: both;
-}
-
-/*#footer > li {
-	position: relative;
-	transform: translateY(-50%);
-	top: 50%;
-	padding-left: 5px;
-	padding-top: 5px;
-	color: #83d0f2;
-}*/
