@@ -23,7 +23,7 @@ html {
 	text-align: center;
 
 	border: 3px white solid;
-	box-shadow: -73px 73px 9px 0px rgba(0, 0, 0, 0.41);
+	box-shadow: -73px 73px 9px 0px rgba(0, 0, 0, 0.40);
 }
 
 h1 {
@@ -31,13 +31,11 @@ h1 {
 	top: 10%;
 	width: 100%;
 	color: white;
-	font-size: 4em;
 	font-size: 4vw;
 }
 
 #navbar a {
-	font-size: 1.5vw;
-	/*font-size: 1.5em;*/
+	font-size: 1.6vw;
 	font-weight: bold;
 	color: white;
 	display: flex;
@@ -73,9 +71,18 @@ h1 {
 	top: 60%;
 }
 
+#navbar .submenu > li > a {
+	font-size: 1.2vw;
+	background-color: #222;
+}
+
+#navbar .submenu > li > a:hover {
+	background-color: #111;
+}
+
 .submenu li {
 	display: none;
-	border-left: 3px white solid;
+	box-shadow: 3px 0px 0px 0px white, -3px 0px 0px 0px white;
 }
 
 .submenu {
