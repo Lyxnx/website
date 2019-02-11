@@ -53,7 +53,6 @@
 }
 
 #active {
-	/*border-bottom: 2px #ecbc6a solid;*/
 	box-shadow: inset 5px -5px 5px 0px #ECBC6A, inset 0px 0px 28px -4px rgba(0, 0, 0, 0.41);
 }
 

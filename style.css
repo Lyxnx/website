@@ -1,5 +1,5 @@
 html {
-	background-image: url(subbackground.jpg);
+	background-image: url(images/subbackground.jpg);
 	background-attachment: fixed;
 }
 
@@ -16,7 +16,7 @@ article > ul, article > ol {
 	padding-left: 20px;
 }
 
-article, h1, h3 {
+article, h1, h3, h4 {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
