@@ -5,14 +5,13 @@
 }
 
 html {
-	background: url(images/background.jpg) no-repeat fixed top center;
-	background-attachment: fixed;
-	background-size: cover;
+	background: url(images/background.jpg) no-repeat center center fixed;
 	-ms-background-size: cover; 
 	-o-background-size: cover; 
  	-moz-background-size: cover; 
 	-webkit-background-size: cover;
-	overflow: none;
+	background-size: cover;
+	overflow: hidden;
 }
 
 /* 
