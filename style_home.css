@@ -5,9 +5,13 @@
 }
 
 html {
-	background: url(images/background.jpg) no-repeat fixed center center;
+	background: url(images/background.jpg) no-repeat fixed top center;
 	background-attachment: fixed;
 	background-size: cover;
+	-ms-background-size: cover; 
+	-o-background-size: cover; 
+ 	-moz-background-size: cover; 
+	-webkit-background-size: cover;
 	overflow: none;
 }
 
@@ -44,7 +48,7 @@ html {
 */
 
 @media (min-width: 320px) and (max-width: 480px) {
-	#container {
+	/*#container {
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
@@ -52,7 +56,7 @@ html {
 
 	h1 {
 		
-	}
+	}*/
 }
 
 #container {
