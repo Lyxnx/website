@@ -5,8 +5,10 @@
 }
 
 html {
-	background: url(images/background.jpg) no-repeat center center fixed;
+	background: url(images/background.jpg) no-repeat fixed center center;
+	background-attachment: fixed;
 	background-size: cover;
+	overflow: none;
 }
 
 /* 
