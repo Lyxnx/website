@@ -75,40 +75,11 @@ html {
 }
 
 /* 
-  ##Device = Tablets, Ipads (portrait)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  
-}
-
-/* 
-  ##Device = Tablets, Ipads (landscape)
-  ##Screen = B/w 768px to 1024px
-*/
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-  
-}
-
-/* 
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media (min-width: 481px) and (max-width: 767px) {
-	#container {
-		
-	}
-}
-
-/* 
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
 	#container {
 		display: flex;
 		flex-direction: column;
@@ -134,7 +105,6 @@ html {
 		position: absolute;
 		top: 60%;
 		width: 75%;
-		text-align: center;
 		box-shadow: -15px 15px 9px 0px rgba(0, 0, 0, 0.40);
 		border: 3px solid white;
 	}
@@ -144,7 +114,7 @@ html {
 	}
 
 	#navbar .submenu > li > a {
-		font-size: 150%;
+		font-size: 120%;
 	}
 
 	#navbar a {
