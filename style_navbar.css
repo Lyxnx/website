@@ -4,59 +4,103 @@
 	padding: 0;
 }
 
-#navbar a {
-	font-weight: bold;
-	color: #83d0f2;
-	display: flex;
-	padding: 14px 16px;
-	text-decoration: none;
-	justify-content: space-around;
-	background-color: #222;
+@media (min-width: 320px) and (max-width: 767px) {
+	#navbar {
+		position: fixed;
+		width: 100%;
+		background-color: #222;
+	}
+
+	#navbar #navbar-open {
+		display: block;
+		width: 50px;
+		padding: 14px 16px;
+	}
+
+	#navbar ul {
+		flex-direction: column;
+		list-style: none;
+		/*display: none;*/
+		width: 100%;
+		position: absolute;
+		height: 100%;
+	}
+
+	#navbar a:hover {
+		background-color: #111;
+		cursor: pointer;
+	}
+
+	#navbar a {
+		background-color: #222;
+		text-decoration: none;
+	}
+
+	#navbar-open:hover ul li {
+		/*display: block;*/
+		background-color: blue;
+	}
 }
 
-#navbar a:hover {
-	background-color: #111;
-	cursor: pointer;
-}
+@media (min-width: 768px) {
+	#navbar #navbar-open {
+		display: none;
+	}
 
-#navbar ul {
-	list-style: none;
-	display: flex;
-}
+	#navbar a {
+		font-weight: bold;
+		color: #83d0f2;
+		display: flex;
+		padding: 14px 16px;
+		text-decoration: none;
+		justify-content: space-around;
+		background-color: #222;
+	}
 
-#navbar li {
-	width: 100%;
-	text-align: center;
-	position: relative;
-}
+	#navbar a:hover {
+		background-color: #111;
+		cursor: pointer;
+	}
 
-#navbar li:hover .submenu > li {
-	display: block;
-	top: 0;
-}
+	#navbar ul {
+		list-style: none;
+		display: flex;
+	}
 
-#navbar {
-	position: fixed;
-	width: 100%;
-	top: 0;
-}
+	#navbar li {
+		width: 100%;
+		text-align: center;
+		position: relative;
+	}
 
-.submenu li {
-	display: none;
-}
+	#navbar li:hover .submenu > li {
+		display: block;
+		top: 0;
+	}
 
-.submenu {
-	display: flex;
-	flex-direction: column;
-	position: absolute;
-	width: 100%;
-}
+	#navbar {
+		position: fixed;
+		width: 100%;
+		top: 0;
+	}
 
-#active {
-	box-shadow: inset 5px -5px 5px 0px #ECBC6A, inset 0px 0px 28px -4px rgba(0, 0, 0, 0.41);
-}
+	.submenu li {
+		display: none;
+	}
 
-.spacer {
-	width: 100%;
-	height: 40px;
+	.submenu {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		width: 100%;
+	}
+
+	#active {
+		box-shadow: inset 5px -5px 5px 0px #ECBC6A, inset 0px 0px 28px -4px rgba(0, 0, 0, 0.41);
+	}
+
+	.spacer {
+		width: 100%;
+		height: 40px;
+	}
 }
