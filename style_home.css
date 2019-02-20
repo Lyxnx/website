@@ -30,22 +30,8 @@ hr {
 		text-align: center;
 	}
 
-	.top {
+	#navbar {
 		position: absolute;
-		top: 10%;
-	}
-
-	.bottom {
-		position: absolute;
-		top: 60%;
-	}
-
-	#navbar ul li {
-		border-right: 1px solid #363636;
-	}
-
-	#navbar ul li:last-child {
-		border-right: none;
 	}
 }
 
@@ -57,9 +43,14 @@ hr {
 		left: 0;
 		right: 0;
 		margin: auto;
-		width: 75%;
+		width: 50%;
 		height: 50%;
 		box-shadow: 3px 0 15px -4px rgba(0, 0, 0, 0.4), -3px 0 15px -4px rgba(0, 0, 0, 0.4);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		text-align: center;
 	}
 
 	#navbar ul li a {
