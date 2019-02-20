@@ -10,9 +10,9 @@ html {
 
 p {
 	word-wrap: break-word;
-	text-align: center;
 	line-height: 1.5em;
 	padding: 10px;
+	text-align: justify;
 }
 
 .subtitle {
@@ -22,9 +22,16 @@ p {
 }
 
 h1, h3 {
+	font-size: 1.5em;
 	font-weight: normal;
 	text-align: center;
 	padding: 14px 15px;
+}
+
+h4 {
+	padding: 10px;
+	font-size: 1.2em;
+	font-weight: normal;
 }
 
 hr {
@@ -45,10 +52,6 @@ main ul li {
 	padding-bottom: 10px;
 }
 
-.left {
-	text-align: left;
-}
-
 .contents {
 	margin-left: 20px;
 }
@@ -63,11 +66,15 @@ main ul li {
 	color: red;
 }
 
+img {
+	margin: 0 auto;
+	display: block;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 	body {
 		text-align: center;
 		display: flex;
-		/*justify-content: center;*/
 		flex-direction: column;
 	}
 

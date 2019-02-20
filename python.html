@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<meta charset=UTF-8 >
+<meta charset=UTF-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 <title>Python Coursework</title>
 
 <link rel="stylesheet" href="style.css">
@@ -7,49 +9,71 @@
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-<header>
-	<nav id="navbar">
+<div id="headcontainer">
+	<header>
+		<nav role="navigation" id="navbar">
+			<ul>
+				<li><a href="index.html">home</a></li>
+				<li>
+					<a class="active">coursework</a>
+					<ul class="submenu">
+						<li><a href="litreview.html">lit review</a></li>
+						<li><a href="python.html">python</a></li>
+					</ul>
+				</li>
+				<li><a href="#">discovery log</a></li>
+				<li>
+					<a href="#">validation</a>
+					<ul class="submenu">
+						<li><a href="http://validator.w3.org/check?uri=referer">html</a></li>
+						<li><a href="http://jigsaw.w3.org/css-validator/check/referer/">css</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+</div>
+
+<main>
+	<article>
+		<h1>Python Pattern Coursework</h1>
+
+		<hr />
+
+		<p>For this coursework, I had to generate a pattern based on some user inputs:</p>
+
 		<ul>
-			<li><a href="index.html">HOME</a></li>
-			<li>
-				<a id="active">COURSEWORK</a>
-				<ul class="submenu">
-					<li><a href="litreview.html">LIT REVIEW</a></li>
-					<li><a href="python.html">PYTHON</a></li>
-				</ul>
-			</li>
-			<li><a href="discoverylog.html">DISCOVERY LOG</a></li>
-			<li>
-				<a>VALIDATION</a>
-				<ul class="submenu">
-					<li><a href="http://validator.w3.org/check?uri=referer">HTML</a></li>
-					<li><a href="http://jigsaw.w3.org/css-validator/check/referer/">CSS</a></li>
-				</ul>
-			</li>
+			<li>The grid size (5x5, 7x7 or 9x9)</li>
+			<li>Some colours from a set list</li>
 		</ul>
-	</nav>
-</header>
 
-<div class="spacer">&nbsp;</div>
+		<p>The patterns were different for everyone and were generated based off of student number.</p>
 
-<article>
-	<h1>Python Pattern Coursework</h1>
+		<h3>The Patterns</h3>
 
-	<p>For this coursework, I had to generate a pattern based on some user inputs:</p>
+		<hr />
 
-	<ol>
-		<li>The grid size (5x5, 7x7 or 9x9)</li>
-		<li>Some colours from a set list</li>
-	</ol>
+		<h4>Antepenultimate (fourth) digit</h4>
 
-	<p>The patterns were different for everyone and were generated based off of student number.</p>
+		<p>The fourth digit of the student number determines the layout of the patterns.</p>
 
-	<h3>The Patterns</h3>
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 599px)" srcset="images/python_layout_vertical.png">
+			<source media="(min-width: 600px) and (max-width: 839px)" srcset="images/python_layout_3x3.png">
+			<source media="(min-width: 840px) and (max-width: 1071px)" srcset="images/python_layout_4x2.png">
+			<img src="images/python_layout.png" alt="Python pattern layouts in 5x5 format.">
+		</picture>
 
-	<h4>Antepenultimate (fourth) digit</h4>
+		<p>This table assumes that the first inputted colour is blue, the second yellow, and third pink.</p>
+		<p>Patches that are blank correspond to the fifth digit (see below) pattern and those with an F correspond to the last digit pattern.</p>
 
-	<p>The fourth digit of the student number determines the layout of the patterns.</p>
+		<h4>Penultimate (fifth) digit</h4>
 
-	<picture>
-	</picture>
-</article>
+		<picture>
+			<source media="(min-width: 320px) and (max-width: 599px)" srcset="images/python_fifth_vertical.png">
+			<source media="(min-width: 600px) and (max-width: 839px)" srcset="images/python_fifth_3x3.png">
+			<source media="(min-width: 840px) and (max-width: 1071px)" srcset="images/python_fifth_4x2.png">
+			<img src="images/python_fifth.png" alt="Python pattern format for the 5th digit.">
+		</picture>
+	</article>
+</main>
