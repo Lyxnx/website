@@ -13,6 +13,16 @@ hr {
 	margin: 10px auto;
 }
 
+.top {
+	position: absolute;
+	top: 25%;
+}
+
+.bottom {
+	position: absolute;
+	top: 60%;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 767px) {
 	#container {
 		position: absolute;
@@ -30,9 +40,12 @@ hr {
 		text-align: center;
 	}
 
-	#navbar {
-		position: absolute;
-		top: 60%;
+	#navbar ul li {
+		border-right: 1px solid #363636;
+	}
+
+	#navbar ul li:last-child {
+		border: none;
 	}
 }
 
