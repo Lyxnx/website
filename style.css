@@ -5,7 +5,9 @@
 }
 
 html {
-	background-color: #fafafa;
+	background: url("images/background.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
 }
 
 p {

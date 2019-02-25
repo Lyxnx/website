@@ -3,8 +3,17 @@
 	padding: 0;
 }
 
+html {
+	background: url("images/background.jpg");
+	background-attachment: fixed;
+}
+
 body {
 	height: 100%;
+}
+
+h1 {
+	color: white;
 }
 
 .subtitle {
@@ -39,30 +48,22 @@ hr {
 	left: 0;
 	right: 0;
 	margin: auto;
-	box-shadow: 3px 0 15px -4px rgba(0, 0, 0, 0.4), -3px 0 15px -4px rgba(0, 0, 0, 0.4);
+}
+
+#navbar ul li a {
+	color: white;
+}
+
+#navbar ul li:hover {
+	background-color: #666;
+}
+
+.submenu li {
+	background-color: #666;
 }
 
 /* phones in portrait mode */
 @media only screen and (min-width: 320px) and (max-width: 767px) {
-	#container {
-		height: 50%;
-	}
-
-	#navbar ul li {
-		border-right: 1px solid #363636;
-	}
-
-	#navbar ul li:last-child {
-		border: none;
-	}
-}
-
-/* phones in landscape mode */
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-	#container {
-		height: 100%;
-	}
-
 	#navbar ul li {
 		border-right: 1px solid #363636;
 	}
@@ -76,6 +77,8 @@ hr {
 	#container {
 		width: 50%;
 		height: 50%;
+		border: 3px solid white;
+		box-shadow: -75px 75px 5px 0px rgba(0, 0, 0, 0.4);
 	}
 
 	#navbar ul li a {
