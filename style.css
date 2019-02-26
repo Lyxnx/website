@@ -4,12 +4,6 @@
 	padding: 0;
 }
 
-html {
-	background: url("images/background.jpg");
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-}
-
 p {
 	word-wrap: break-word;
 	line-height: 1.5em;
@@ -31,6 +25,9 @@ h4 {
 }
 
 hr {
+	border: 0;
+	height: 1px;
+	background: black;
 	width: 75%;
 	margin: 10px auto;
 }
@@ -75,6 +72,10 @@ img, .centre {
 }
 
 @media only screen and (min-width: 768px) {
+	html {
+		background: url("images/background.jpg") no-repeat fixed center center;
+	}
+
 	body {
 		margin: 0 auto;
 		width: 75%;

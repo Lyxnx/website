@@ -4,8 +4,7 @@
 }
 
 html {
-	background: url("images/background.jpg");
-	background-attachment: fixed;
+	background: url("images/background.jpg") no-repeat fixed center center;
 }
 
 body {
@@ -18,12 +17,15 @@ h1 {
 
 .subtitle {
 	font-style: italic;
-	color: #666;
+	color: #ccc;
 }
 
 hr {
+	border: 0;
+	height: 1px;
 	width: 75%;
 	margin: 10px auto;
+	background: white;
 }
 
 .top {
