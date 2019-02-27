@@ -1,8 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-
 html {
 	background: url("images/background.jpg") no-repeat fixed center center;
 }
@@ -62,6 +57,16 @@ hr {
 
 .submenu li {
 	background-color: #666;
+}	
+
+#credit {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	color: white;
+	font-style: italic;
+	font-family: 'Tangerine', cursive;
+	font-size: 1.5em;
 }
 
 /* phones in portrait mode */
