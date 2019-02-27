@@ -60,6 +60,60 @@ img, .centre {
 	display: block;
 }
 
+#headcontainer {
+	height: 75px;
+}
+
+#navbar ul {
+	display: flex;
+	justify-content: flex-end;
+}
+
+#navbar ul li {
+	list-style: none;
+	position: relative;
+}
+
+#navbar ul li a {
+	cursor: pointer;
+	padding: 14px 5px;
+	color: #363636;
+	display: block;
+	text-decoration: none;
+}
+
+#navbar ul li a:hover {
+	color: red;
+}
+
+#navbar ul li:hover .submenu > li {
+	display: block;
+	top: 0;
+}
+
+#navbar ul li:hover {
+	background-color: #eeeff0;
+}
+
+.submenu li {
+	display: none;
+	background-color: #eeeff0;
+	text-align: center;
+}
+
+.submenu {
+	display: flex;
+	flex-direction: column;
+	z-index: 10;
+	width: 100%;
+	position: absolute;
+	overflow: visible;
+}
+
+.active {
+	color: red !important;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 	body {
 		display: flex;
