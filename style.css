@@ -24,6 +24,23 @@ h4 {
 	font-weight: normal;
 }
 
+h4 a, h3 a {
+	text-decoration: none;
+	color: black;
+}
+
+h4 a:hover, h3 a:hover {
+	color: red;
+}
+
+button {
+	margin-left: 10px;
+	background-color: #eeeff0;
+	padding: 15px 32px;
+	border: none;
+	font-weight: bold;
+}
+
 hr {
 	border: 0;
 	height: 1px;
@@ -33,25 +50,31 @@ hr {
 }
 
 main ul {
-	padding: 10px;
+	padding: 10px 0 10px 10px;
 	margin-left: 15px;
 }
 
-main ul li {
-	padding-bottom: 10px;
+main ul ul {
+	padding-top: 0;
+	padding-bottom: 0;
 }
 
-.contents {
+main ol {
+	padding: 0 10px 10px;
+}
+
+#contents {
+	display: none;
 	margin-left: 20px;
 }
 
-.contents a {
+#contents a {
 	cursor: pointer;
 	text-decoration: none;
 	color: #363636;
 }
 
-.contents a:hover {
+#contents a:hover {
 	color: red;
 }
 
@@ -137,7 +160,7 @@ img, .centre {
 		box-shadow: 3px 0 15px -4px rgba(0, 0, 0, 0.4), -3px 0 15px -4px rgba(0, 0, 0, 0.4);
 	}
 
-	#navbar ul li a {
+	#navbar ul li a, h4 a {
 		transition: color 0.4s;
 	}
 }
