@@ -63,6 +63,12 @@ main ol {
 	padding: 0 10px 10px;
 }
 
+#videocontainer {
+	width: 90%;
+	margin: 0 auto;
+	display: block;
+}
+
 #contents {
 	display: none;
 	margin-left: 20px;
@@ -78,7 +84,7 @@ main ol {
 	color: red;
 }
 
-img, .centre {
+img {
 	margin: 0 auto;
 	display: block;
 }
