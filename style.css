@@ -34,7 +34,7 @@ h4 a:hover, h3 a:hover {
 }
 
 button {
-	margin-left: 10px;
+	margin: 10px;
 	background-color: #eeeff0;
 	padding: 15px 32px;
 	border: none;
@@ -63,13 +63,18 @@ main ol {
 	padding: 0 10px 10px;
 }
 
-#videocontainer {
-	width: 90%;
+video {
+	width: 90% !important;
+	height: auto !important;
 	margin: 0 auto;
 	display: block;
 }
 
-#contents {
+#transcript {
+	font-style: italic;
+}
+
+#contents, #transcript {
 	display: none;
 	margin-left: 20px;
 }

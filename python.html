@@ -10,6 +10,8 @@
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+<script src="script.js"></script>
+
 <div id="headcontainer">
 	<header>
 		<nav id="navbar">
@@ -106,12 +108,22 @@
 
 		<hr />
 
-		<div id="videocontainer">
-			<video class="centre" controls>
-				<source src="python_demo.mp4" type="video/mp4">
-				<source src="python_demo.webm" type="video/webm">
-				Your browser does not support this type of video. Sorry.
-			</video>
-		</div>
+		<button onclick="toggleId('transcript');">Show Transcript</button>
+		<p id="transcript">
+			The python file is run.
+			The patchwork size is set to 7 as per user input.
+			'Red' is input for the first colour.
+			'Red' is input again to demonstrate the checking of duplicate colours.
+			'Green' and 'blue' are entered for the next colours.
+			The patchwork is drawn on screen.
+			A pattern is selected to demonstrate the selection and 'd' is pressed to delete it. It is then deselected using the Enter key.
+			Another pattern is then selected and switched to the other pattern using the 's' key.
+		</p>
+
+		<video class="centre" controls>
+			<source src="python_demo.mp4" type="video/mp4">
+			<source src="python_demo.webm" type="video/webm">
+			Your browser does not support this type of video. Sorry.
+		</video>
 	</article>
 </main>
