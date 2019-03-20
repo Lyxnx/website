@@ -94,7 +94,7 @@ img {
 	display: block;
 }
 
-#headcontainer {
+header {
 	height: 75px;
 }
 
@@ -146,6 +146,24 @@ img {
 
 .active {
 	color: red !important;
+}
+
+#topJump {
+	position: fixed;
+	left: 10px;
+	top: 50%;
+	bottom: 50%;
+	width: 50px;
+	height: 50px;
+	z-index: 99;
+	background-color: #eeeff0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-decoration: none;
+	border-radius: 50%;
+	font-size: 2em;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {

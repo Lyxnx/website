@@ -11,32 +11,28 @@
 
 <script src="script.js"></script>
 
-<div id="top"></div>
-
-<div id="headcontainer">
-	<header>
-		<nav id="navbar">
-			<ul>
-				<li><a href="index.html">home</a></li>
-				<li>
-					<a>coursework</a>
-					<ul class="submenu">
-						<li><a href="litreview.html">lit review</a></li>
-						<li><a href="python.html">python</a></li>
-					</ul>
-				</li>
-				<li><a class="active" href="discoverylog.html">discovery log</a></li>
-				<li>
-					<a href="#">validation</a>
-					<ul class="submenu">
-						<li><a href="https://validator.w3.org/check?uri=referer">html</a></li>
-						<li><a href="https://jigsaw.w3.org/css-validator/check/referer/">css</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header>
-</div>
+<header>
+	<nav id="navbar">
+		<ul>
+			<li><a href="index.html">home</a></li>
+			<li>
+				<a>coursework</a>
+				<ul class="submenu">
+					<li><a href="litreview.html">lit review</a></li>
+					<li><a href="python.html">python</a></li>
+				</ul>
+			</li>
+			<li><a class="active" href="discoverylog.html">discovery log</a></li>
+			<li>
+				<a href="#">validation</a>
+				<ul class="submenu">
+					<li><a href="https://validator.w3.org/check?uri=referer">html</a></li>
+					<li><a href="https://jigsaw.w3.org/css-validator/check/referer/">css</a></li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+</header>
 
 <main>
 	<article>
@@ -60,6 +56,8 @@
 			<li><a href="#week16">Week 16 - usability</a></li>
 			<li><a href="#week17">Week 17 - accessibility</a></li>
 		</ol>
+
+		<a id="topJump" href="#top">&#8593;</a>
 
 		<h1>Discovery Log</h1>
 		<hr>
@@ -148,21 +146,21 @@
 		<h4 id="week7"><a href="#top">Week 7 - separating form and content</a></h4>
 		<ul>
 			<li>Markup is descriptive, not procedural
-			<ul>
-				<li>Describes what it means, NOT how it looks</li>
-				<li>Leave that for CSS</li>
-				<li>Descriptive markup has semantic value</li>
-			</ul>
-		</li>
+				<ul>
+					<li>Describes what it means, NOT how it looks</li>
+					<li>Leave that for CSS</li>
+					<li>Descriptive markup has semantic value</li>
+				</ul>
+			</li>
 			<li>Separating style reduces the amount of data and processing required</li>
 			<li>Parts of a CSS rule
 				<ul>
 					<li>
 						<!-- i know this is horrible but for formatting sake -->
 						<pre>p { ← selector
-	background: red; ← property: value
-	color: white;
-}</pre>
+							background: red; ← property: value
+							color: white;
+						}</pre>
 					</li>
 					<li>#id for unique element</li>
 					<li>.class for classes</li>
