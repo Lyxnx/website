@@ -24,15 +24,6 @@ h4 {
 	font-weight: normal;
 }
 
-h4 a, h3 a {
-	text-decoration: none;
-	color: black;
-}
-
-h4 a:hover, h3 a:hover {
-	color: red;
-}
-
 button {
 	margin: 10px;
 	background-color: #eeeff0;
@@ -150,7 +141,7 @@ header {
 
 #topJump {
 	position: fixed;
-	left: 10px;
+	right: 10px;
 	top: 50%;
 	bottom: 50%;
 	width: 50px;
@@ -164,12 +155,18 @@ header {
 	text-decoration: none;
 	border-radius: 50%;
 	font-size: 2em;
+	color: #363636;
+}
+
+#topJump:hover {
+	color: red;
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 	body {
 		display: flex;
 		flex-direction: column;
+		margin: auto;
 	}
 
 	#navbar ul li a {
@@ -190,6 +187,10 @@ header {
 	}
 
 	#navbar ul li a, h4 a {
+		transition: color 0.4s;
+	}
+
+	#topJump {
 		transition: color 0.4s;
 	}
 }
