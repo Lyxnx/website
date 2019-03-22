@@ -140,29 +140,6 @@ header {
 	color: red !important;
 }
 
-#topJump {
-	position: fixed;
-	right: 10px;
-	top: 50%;
-	bottom: 50%;
-	width: 50px;
-	height: 50px;
-	z-index: 99;
-	background-color: #eeeff0;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	text-decoration: none;
-	border-radius: 50%;
-	font-size: 2em;
-	color: #363636;
-}
-
-#topJump:hover {
-	color: red;
-}
-
 @media only screen and (min-width: 320px) and (max-width: 480px) {
 	body {
 		display: flex;
@@ -192,6 +169,26 @@ header {
 	}
 
 	#topJump {
+		position: fixed;
+		right: 10px;
+		top: 50%;
+		bottom: 50%;
+		width: 50px;
+		height: 50px;
+		z-index: 99;
+		background-color: #eeeff0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
+		border-radius: 50%;
+		font-size: 2em;
+		color: #363636;
 		transition: color 0.4s;
+	}
+
+	#topJump:hover {
+		color: red;
 	}
 }
