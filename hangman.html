@@ -9,8 +9,6 @@
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 
-<script src="script.js"></script>
-
 <div id="top"></div>
 
 <header>
@@ -30,6 +28,7 @@
 				<ul class="submenu">
 					<li><a href="hangman.html">hangman</a></li>
 					<li><a href="carcheck.html">car check</a></li>
+					<li><a href="clcrypt.html">clcrypt</a></li>
 				</ul>
 			</li>
 		</ul>
@@ -38,6 +37,23 @@
 
 <main>
 	<article>
+		<a id="topJump" href="#top">&#8593;</a>
+
+		<h1>Simple Hangman Game</h1>
+
+		<hr />
+
+		<p>This was a little side project I decided to undertake. It is a game of hangman played entirely on
+		a command line interface (CLI).</p>
+
+		<p>User inputs:</p>
+		<ul>
+			<li><code>-w --word WORD</code> - This would set the game to use the specified word instead of a randomly chosen one.</li>
+			<li><code>-s --source SOURCE_FILE (default current_dir/words.txt</code> - This would allow the user to set a source file of words for the program to randomly choose from.</li>
+		</ul>
+
+		<p>The source file could be any file as long as it's a text file with each entry being separated by a new line character (\n).</p>
+
 		
 	</article>
 </main>

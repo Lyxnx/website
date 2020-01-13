@@ -57,6 +57,7 @@ hr {
 
 .submenu li {
 	background-color: #666;
+	width: 100%;
 }	
 
 #credit {
@@ -77,6 +78,10 @@ hr {
 
 	#navbar ul li:last-child {
 		border: none;
+	}
+
+	.submenu li a {
+		white-space: pre-line;
 	}
 }
 
