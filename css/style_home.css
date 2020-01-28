@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+@media screen and (min-width: 600px) {
+  #navbar {
+    background-color: #1b242f;
+    border-bottom: 3px solid #04c2c9;
+  }
+  #navbar ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+  #navbar ul li {
+    list-style-type: none;
+    position: relative;
+  }
+  #navbar ul li a {
+    padding: 20px 15px;
+    color: #F9F1E9;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1.5vw;
+  }
+  #navbar ul li a:hover {
+    color: #e31b6d;
+  }
+  #navbar ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #04c2c9;
+    transition: 300ms;
+    width: 0px;
+    height: 3px;
+  }
+  #navbar ul li a:hover::after {
+    width: 100%;
+  }
+  #navbar .active {
+    color: #e31b6d;
+  }
+}
+#large-header {
+  position: relative;
+  width: 100%;
+  background-image: url("../images/index.jpg");
+  background-size: cover;
+}
+
+.main-title {
+  position: absolute;
+  color: #F9F1E9;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  text-transform: uppercase;
+  font-size: 10em;
+  letter-spacing: 0.1em;
+}
+.main-title .name {
+  color: #e31b6d;
+}
+.main-title .thin {
+  font-weight: 200;
+}
+
+#navbar {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+#navbar ul li a {
+  color: #F9F1E9;
+  font-weight: 200;
+}
+
+@media only screen and (min-width: 600px) {
+  .main-title {
+    font-size: 2.5em;
+  }
+}
+
+/*# sourceMappingURL=style_home.css.map */

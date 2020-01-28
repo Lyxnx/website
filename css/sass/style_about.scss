@@ -1,0 +1,42 @@
+@import "common";
+
+#title-block {
+    font-size: 3.5em;
+    margin: 20px;
+}
+
+hr {
+    margin-left: 20px;
+    width: 40%;
+}
+
+main {
+    margin: 20px;
+    font-size: 1.4em;
+
+    a {
+        color: $blue;
+
+        &:hover {
+            background-color: $red;
+            transition: 300ms;
+        }
+    }
+
+    h1 {
+        padding: 16px 0;
+    }
+
+    h2 {
+        color: $blue;
+        padding: 12px 0;
+    }
+
+    p {
+        padding: 8px 0;
+    }
+
+    ul {
+        padding-left: 40px;    
+    }
+}
