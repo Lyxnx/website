@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 * {
     margin: 0;
@@ -6,57 +6,61 @@
     font-family: 'Montserrat', 'Segoe UI', sans-serif;
 }
 
-$red: #e31b6d;
-$cyan: #04c2c9;
+$darkblue: #353546;
 $charcoal: #3C3C3B;
 $blue: #1B65F2;
+$green: #37e65d;
+
+#navbar {
+    background-color: #1b242f;
+    border-bottom: 3px solid $darkblue;
+    display: flex;
+    width: 100%;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    
+    a {
+        background-color: #1b242f;
+        padding: 20px 15px;
+        color: #F9F1E9;
+        display: block;
+        text-decoration: none;
+        cursor: pointer;
+        font-size: 1.5em;
+        font-weight: 200;
+        
+        &:hover {
+            transition: 0.3s;
+            color: $green;
+        }
+    }
+    
+    .active {
+        color: $green;
+    }
+}
+
+#links {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    #links.responsive {
+        display: flex;
+        flex-direction: column;
+    }
+}
 
 @media screen and (min-width: 600px) {
-    #navbar {
-        background-color: #1b242f;
-        border-bottom: 3px solid $cyan;
-        
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            
-            li {
-                list-style-type: none;
-                position: relative;
-                
-                a {
-                    padding: 20px 15px;
-                    color: #F9F1E9;
-                    display: block;
-                    text-decoration: none;
-                    cursor: pointer;
-                    font-size: 1.5vw;
-                    
-                    &:hover {
-                        color: $red;
-                    }
-                    
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        background: $cyan;
-                        transition: 300ms;
-                        width: 0px;
-                        height: 3px;
-                    }
-                    
-                    &:hover::after {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-        
-        .active {
-            color: $red;
-        }
+    #menu {
+        display: none !important;
+    }
+    
+    #links {
+        display: flex;
     }
 }
