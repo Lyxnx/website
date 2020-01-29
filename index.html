@@ -1,46 +1,45 @@
 <!DOCTYPE html>
-<meta charset=UTF-8>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alistair Julnes</title>
 
-<link href="https://fonts.googleapis.com/css?family=Tangerine" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<title>Home | Alistair Julnes</title>
+<meta content="width=device-width, initial-scale=1" name="viewport" />
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="style_home.css">
+<link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
 
-<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+<script src="js/common.js"></script>
+<script src="js/index.js"></script>
 
-<div id="container">
-	<div class="top">
-		<h1>Alistair Julnes</h1>
-		<p class="subtitle">Behold the holy site that is mine</p>
-		<hr />
-	</div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style_home.css">
 
-	<div class="bottom">
-		<nav id="navbar">
-			<ul>
-				<li><a href="index.html" class="active">home</a></li>
-				<li>
-					<a>university</a>
-					<ul class="submenu">
-						<li><a href="litreview.html">lit review</a></li>
-						<li><a href="python.html">python</a></li>
-						<li><a href="discoverylog.html">discovery log</a></li>
-					</ul>
-				</li>
-				<li>
-					<a>all projects</a>
-					<ul class="submenu">
-						<li><a href="hangman.html">hangman</a></li>
-						<li><a href="carcheck.html">car check</a></li>
-						<li><a href="clcrypt.html">clcrypt</a></li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</div>
+<!-- Simple script so not worth putting into a separate js file -->
+<script>
+    window.addEventListener('load', () => {
+        // close the menu if anywhere else is clicked on the page while the menu is opened
+        document.querySelector('#large-header').addEventListener('click', () => {
+            const x = document.querySelector('#links');
+            if (isResponsive(x)) {
+                x.className = '';
+            }
+        });
+    });
+</script>
+
+<nav id="navbar">
+    <a id="menu" onclick="toggleMenu()" class="fa fa-bars"></a>
+    <div id="links">
+        <a class="active" href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</nav>
+
+<div id="large-header">
+    <canvas id="demo-canvas"></canvas>
+    <h1 class="main-title">
+        <span class="thin">Hello, I'm</span> <span class="name">Alistair Julnes</span> 
+        <div class="thin">I'm a Software Engineering student</div>
+    </h1>
 </div>
-
-<p id="credit">Image by user alextc1</p>

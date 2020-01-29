@@ -1,12 +1,29 @@
-    
+/*
+From a very nice codepen
+*/
+
 let width, height, largeHeader, canvas, ctx, points, target, animateHeader = true;
 
 // Main
 window.addEventListener('load', () => {
     initHeader();
-    initAnimation();
     addListeners();
+
+    let x = window.matchMedia('(min-width: 600px)');
+    detectSize(x);
+
+    x.addListener(detectSize);
 });
+
+function detectSize(x) {
+    if (x.matches) {
+        initAnimation();
+    } else {
+        if (animationId !== undefined) {
+            cancelAnimationFrame(animationId);
+        }
+    }
+}
 
 function initHeader() {
     width = window.innerWidth;
@@ -113,6 +130,8 @@ function initAnimation() {
     }
 }
 
+let animationId;
+
 function animate() {
     if(animateHeader) {
         ctx.clearRect(0,0,width,height);
@@ -136,7 +155,7 @@ function animate() {
             points[i].circle.draw();
         }
     }
-    requestAnimationFrame(animate);
+    animationId = requestAnimationFrame(animate);
 }
 
 function shiftPoint(p) {
@@ -145,7 +164,7 @@ function shiftPoint(p) {
         onComplete: function() {
             shiftPoint(p);
         }});
-}
+    }
     
 // Canvas manipulation
 function drawLines(p) {
@@ -155,29 +174,27 @@ function drawLines(p) {
         ctx.moveTo(p.x, p.y);
         ctx.lineTo(p.closest[i].x, p.closest[i].y);
         ctx.strokeStyle = 'rgba(156,217,249,'+ p.active+')';
-        ctx.stroke();
+        ctx.stroke();        
     }
 }
     
-function Circle(pos,rad,color) {
-    var _this = this;        
-    
-    // constructor
-    (function() {
-        _this.pos = pos || null;
-        _this.radius = rad || null;
-        _this.color = color || null;
-    })();
+class Circle {
+    constructor(pos, rad, color) {
+        this.pos = pos || null;
+        this.radius = rad || null;
+        this.color = color || null;
+    }
         
-    this.draw = function() {
-        if(!_this.active) return;
+    draw() {
+        if (!this.active)
+            return;
         ctx.beginPath();
-        ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-        ctx.fillStyle = 'rgba(156,217,249,'+ _this.active+')';
-        ctx.fill();        
-    };
+        ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI, false);
+        ctx.fillStyle = 'rgba(156,217,249,' + this.active + ')';
+        ctx.fill();
+    }
 }
-    
+
 // Util
 function getDistance(p1, p2) {
     return Math.pow(p1.x - p2.x, 2) + Math.pow(p1.y - p2.y, 2);
