@@ -1,45 +1,86 @@
 <!DOCTYPE html>
 
-<title>Home | Alistair Julnes</title>
+<title>Alistair Julnes</title>
 <meta content="width=device-width, initial-scale=1" name="viewport" />
 
 <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
 
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
-<script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
-<script src="js/common.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="js/TweenLite.min.js"></script>
+<script src="js/EasePack.min.js"></script>
+<script src="js/demo.js"></script>
 <script src="js/index.js"></script>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style_home.css">
+<link rel="stylesheet" href="css/style.css">
 
-<!-- Simple script so not worth putting into a separate js file -->
-<script>
-    window.addEventListener('load', () => {
-        // close the menu if anywhere else is clicked on the page while the menu is opened
-        document.querySelector('#large-header').addEventListener('click', () => {
-            const x = document.querySelector('#links');
-            if (isResponsive(x)) {
-                x.className = '';
-            }
-        });
-    });
-</script>
+<section id="home">
+    <canvas id="canvas"></canvas>
+    <h1 class="main-title">
+        <span><span class="thin">Hello, I'm</span> <span class="name">Alistair Julnes</span></span>
+        <div class="thin">I'm a software engineering student</div>
+        <div id="go-button" class="button thin">Off we go</div>
+    </h1>
+</section>
 
 <nav id="navbar">
-    <a id="menu" onclick="toggleMenu()" class="fa fa-bars"></a>
+    <a id="menu" class="fa fa-bars"></a>
     <div id="links">
-        <a class="active" href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a class="active" href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </div>
 </nav>
 
-<div id="large-header">
-    <canvas id="demo-canvas"></canvas>
-    <h1 class="main-title">
-        <span class="thin">Hello, I'm</span> <span class="name">Alistair Julnes</span> 
-        <div class="thin">I'm a Software Engineering student</div>
-    </h1>
-</div>
+<main id="content">
+    <section id="about">
+        <h1>About</h1>
+        <p>I'm a full time student studying Software Engineering at the University of Portsmouth. 
+            I have a passion for creating software TODO
+        </p>
+    </section>
+    
+    <section id="projects">
+        <h1>Projects</h1>
+
+        <p>Here are some of my most notable projects, ranging from the most complex to least.</p>
+        
+        <div id="projectcards">
+            <div class="project">
+                <img src="images/car-check.png">
+                <h4>Car Check</h4>
+                <h4>An Android application developed in Java, used for retrieving vehicle information based on its registration.</h4>
+            </div>
+
+            <div class="project">
+                <img src="images/website.png">
+                <h4><a href="https://github.com/Lyxnx/website">This website</a></h4>
+                <h4>This portfolio website. Created with JavaScript using the <a target="_blank" href="https://jquery.com">jQuery</a> library, CSS (SCSS) and HTML.</h4>
+            </div>
+            
+            <div class="project">
+                <img src="images/clcrypt.png">
+                <h4><a href="https://github.com/Lyxnx/clcrypt">CLCrypt</a></h4>
+                <h4>A simple command line tool developer in Java for creating hashes.</h4>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h1>Contact</h1>
+
+        <p>Like to get in touch? Great - just use the form below.</p>
+
+        <form id="contact-form">
+            <input placeholder="Name" type="text" required>
+            <input placeholder="Your email" type="email" required>
+            <textarea placeholder="Your message" type="text" required></textarea>
+            <div id="success">
+                Your message was sent. Thank you.
+                <span class="fa fa-times"></span>
+            </div>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </section>
+</main>

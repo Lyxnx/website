@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Source+Code+Pro&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Segoe UI", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#home {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../images/index.jpg");
+  background-position: left;
+  border-bottom: 3px solid #353546;
+}
+
+.main-title {
+  position: absolute;
+  color: #F9F1E9;
+  text-align: center;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate3d(-50%, -50%, 0);
+  transform: translate3d(-50%, -50%, 0);
+  font-size: 2.5em;
+  letter-spacing: 0.1em;
+  z-index: 10;
+  font-weight: 200;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-title .name {
+  color: #3c8cc5;
+}
+.main-title .thin {
+  font-weight: 200;
+}
+.main-title .button {
+  font-size: 0.7em;
+  text-align: center;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: 3px solid #F9F1E9;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.main-title .button:hover {
+  border-color: #3c8cc5;
+  color: #3c8cc5;
+}
+
+#navbar {
+  background-color: #1b242f;
+  border-bottom: 3px solid #353546;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+#navbar a {
+  padding: 20px 15px;
+  color: #F9F1E9;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 200;
+  transition: color 0.5s;
+}
+#navbar a:hover {
+  color: #3c8cc5;
+}
+#navbar .active {
+  color: #3c8cc5;
+}
+
+#links {
+  display: none;
+}
+
+#content section {
+  padding: 100px 50px;
+  font-size: 1.2em;
+  text-align: center;
+}
+#content section:nth-child(even) {
+  background-color: #f5f5f5;
+}
+#content section h1 {
+  font-size: 2.5em;
+  position: relative;
+  width: fit-content;
+  margin: 10px auto 50px auto;
+}
+#content section h1::after {
+  content: "";
+  background: black;
+  height: 3px;
+  position: absolute;
+  width: 40%;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+#content section h2 {
+  padding: 10px 0;
+  color: #3c8cc5;
+}
+#content section P {
+  padding: 8px 0;
+}
+#content section a {
+  text-decoration: none;
+}
+#content section a:hover {
+  background-color: #8bbadc;
+}
+
+#projectcards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#projectcards .project {
+  flex: 1;
+  margin: 20px;
+  background-color: white;
+  border: 1px solid #D0D5D8;
+  padding-bottom: 10px;
+}
+#projectcards .project h4 {
+  padding: 10px 10px 0;
+  text-align: start;
+}
+#projectcards .project h4:not(:first-of-type) {
+  font-weight: normal;
+}
+#projectcards .project img {
+  width: 100%;
+  height: 225px;
+}
+
+#contact {
+  background-color: #1b242f;
+  color: #F9F1E9;
+}
+#contact h1 {
+  color: #F9F1E9;
+}
+#contact h1::after {
+  background: #F9F1E9 !important;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 0 auto;
+  width: 100%;
+}
+#contact-form input, #contact-form textarea {
+  font-size: 1.1em;
+  background-color: #171f29;
+}
+#contact-form input[type=text], #contact-form input[type=email], #contact-form textarea {
+  font-family: "Source Code Pro", "Courier New", Courier, monospace;
+  margin-bottom: 3px;
+  border: none;
+  padding: 10px 15px;
+  color: #F9F1E9;
+}
+#contact-form textarea {
+  min-height: 150px;
+}
+#contact-form input[type=submit] {
+  width: 30%;
+  margin-top: 5px;
+  padding: 10px 30px;
+  border: 3px solid #F9F1E9;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+#contact-form input[type=submit]:hover {
+  border-color: #3c8cc5;
+  color: #3c8cc5;
+}
+#contact-form #success {
+  display: none;
+  background-color: #04c986;
+  margin-top: 5px;
+  padding: 5px 0;
+  text-align: center;
+  color: black;
+  transition: display 0.5s;
+}
+#contact-form #success span {
+  margin: 5px 5px 5px 0;
+  float: right;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 600px) {
+  .main-title {
+    font-size: 3em;
+  }
+
+  #menu {
+    display: none !important;
+  }
+
+  #links {
+    display: flex;
+  }
+
+  #projectcards {
+    flex-direction: row;
+  }
+  #projectcards .project {
+    margin: 0 20px 2px 20px;
+    cursor: pointer;
+    transition: opacity 0.5s;
+  }
+  #projectcards .project:hover {
+    border-bottom: 3px solid #3c8cc5;
+    margin-bottom: 0px;
+  }
+  #projectcards .project.fade {
+    opacity: 0.5;
+  }
+
+  #contact-form {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  #links.responsive {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
